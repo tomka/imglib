@@ -19,7 +19,7 @@ public class TwinValueRangeCursor< T extends ComparableType< T > > extends MetaC
 	Cursor<T> cursor1, cursor2;
 	/* Available forwarding modes for the predicates:
 	 * And: Both predicates need to be true
-	 * Or: One and/or the othen has to be true
+	 * Or: One and/or the other has to be true
 	 * Xor: One or (exclusive) must be true
 	 * None: Both need to be false
 	 */
@@ -118,7 +118,7 @@ public class TwinValueRangeCursor< T extends ComparableType< T > > extends MetaC
 	@Override
 	public void fwd() {
 		/* if we did not check for a next valid element before
-		 * (and thus have no calched types) walk to the next element
+		 * (and thus have no cached types) walk to the next element
 		 */
 		if ( ! hasNextChecked )
 			walkToNextElement();

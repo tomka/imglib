@@ -3,7 +3,7 @@ package imglib.mpicbg.imglib.cursor.special.meta;
 import mpicbg.imglib.type.ComparableType;
 
 /**
- * A predicate that is only true iff the value is above the threshold.
+ * A predicate that is true if, and only if, the value is above the threshold.
  */
 public class AboveThresholdPredicate<T extends ComparableType<T>> implements Predicate<T> {
 	T threshold;
