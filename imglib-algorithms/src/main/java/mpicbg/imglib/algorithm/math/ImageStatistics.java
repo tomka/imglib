@@ -48,13 +48,24 @@ public class ImageStatistics {
 	 */
 	final public static <T extends RealType<T>> double getImageMean( final Image<T> img )
 	{
+		return getImageIntegral(img) / img.getNumPixels();
+	}
+	
+	/**
+	 * Calculates the integral of the pixel values of an image.
+	 * 
+	 * @param img The image to calculate the integral of
+	 * @return The pixel values integral of the image passed
+	 */
+	final public static <T extends RealType<T>> double getImageIntegral( final Image<T> img )
+	{
 		final RealSum sum = new RealSum();
 
 		for ( final T type : img )
 			sum.add( type.getRealDouble() );
 
-		return sum.getSum() / img.getNumPixels();
-	  }
+		return sum.getSum();
+	}
 	
 	/**
 	 * Calculates the min of an image.
