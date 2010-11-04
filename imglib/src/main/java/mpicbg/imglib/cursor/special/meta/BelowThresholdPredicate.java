@@ -15,4 +15,12 @@ public class BelowThresholdPredicate<T extends ComparableType<T>> implements Pre
 	public boolean evaluate(T value) {
 		return value.compareTo(threshold) < 0;
 	}
+	
+	public void setThreshold(T value) {
+		threshold = value;
+	}
+	
+	public T getThreshold() {
+		return threshold;
+	}
 }
