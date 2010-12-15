@@ -3,7 +3,7 @@
 ///**
 // * Is only true iff value is within mask.
 // */
-//public static class InMaskPredicate2D<T extends ComparableType<T>> implements Predicate2D<T> {
+//public static class InMaskPredicate2D<T extends Comparable<T>> implements Predicate2D<T> {
 //	Image<BitType> mask;
 //	double ch1Scaling, ch2Scaling;
 //

@@ -2,17 +2,17 @@ package imglib.mpicbg.imglib.cursor.special;
 
 import imglib.mpicbg.imglib.cursor.special.meta.AlwaysTruePredicate;
 import imglib.mpicbg.imglib.cursor.special.meta.Predicate;
+import mpicbg.imglib.type.Type;
 
 import java.util.Arrays;
 
 import mpicbg.imglib.cursor.Cursor;
-import mpicbg.imglib.type.ComparableType;
 
 /**
  * A class that emulates cursor behavior and allows constraints
  * to be specified for the value of the current elements.
  */
-public class TwinValueRangeCursor< T extends ComparableType< T > > extends MetaCursor<T> {
+public class TwinValueRangeCursor< T extends Type<T> & Comparable<T> > extends MetaCursor<T> {
 	// the predicates for checking if the channel positions are valid
 	Predicate<T> predicate1, predicate2;
 	// the cursors to simplify access within class

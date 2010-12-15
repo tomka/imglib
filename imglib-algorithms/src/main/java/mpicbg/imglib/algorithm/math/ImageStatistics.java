@@ -31,9 +31,9 @@ package mpicbg.imglib.algorithm.math;
 
 import mpicbg.imglib.cursor.Cursor;
 import mpicbg.imglib.image.Image;
-import mpicbg.imglib.type.ComparableType;
 import mpicbg.imglib.type.numeric.RealType;
 import mpicbg.util.RealSum;
+import mpicbg.imglib.type.Type;
 
 /**
  * This class contains some basic {@link Image} statistics
@@ -73,7 +73,7 @@ public class ImageStatistics {
 	 * @param img The image to calculate the min of
 	 * @return The min of the image passed
 	 */
-	final public static <T extends ComparableType<T>> T getImageMin( final Image<T> img )
+	final public static <T extends Type<T> & Comparable<T>> T getImageMin( final Image<T> img )
 	{
 		final Cursor<T> cursor = img.createCursor();
 		cursor.fwd();
@@ -100,7 +100,7 @@ public class ImageStatistics {
 	 * @param img The image to calculate the max of
 	 * @return The max of the image passed
 	 */
-	final public static <T extends ComparableType<T>> T getImageMax( final Image<T> img ) {
+	final public static <T extends Type<T> & Comparable<T>> T getImageMax( final Image<T> img ) {
 
 		final Cursor<T> cursor = img.createCursor();
 		cursor.fwd();
